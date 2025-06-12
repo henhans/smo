@@ -1,7 +1,0 @@
-&BANDS
-   prefix  = 'smo',
-   outdir  = './out/',
-   filband = 'smo_bands.dat'
-   lsym    = .false.,
-/
-
