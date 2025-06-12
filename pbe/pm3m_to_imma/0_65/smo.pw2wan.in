@@ -1,0 +1,9 @@
+&inputpp
+   prefix             = 'smo'
+   outdir             = './out/',
+   seedname           = 'smo'
+   write_mmn          = .true.
+   write_amn          = .true.
+   write_unk          = .false.
+/
+
