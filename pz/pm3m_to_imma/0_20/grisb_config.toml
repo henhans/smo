@@ -5,13 +5,14 @@ enforce_off_diag = true
 block_threshold= 0.001
 csc = true
 
-norb_baths = [9, 9, 9, 9]
+norb_baths = [3, 3, 3, 3]
 
 prec_mu = 0.001
 
 h_int_type = "kanamori"
-U = [3.0, 3.0, 3.0, 3.0]
-J = [0.5, 0.5, 0.5, 0.5]
+U = [3.139, 3.139, 3.139, 3.139]
+U_prime = [2.438, 2.438, 2.438, 2.438]
+J = [0.332, 0.332, 0.332, 0.332]
 
 beta = 49
 eta = 0.1
@@ -38,8 +39,9 @@ num_eig = 1
 
 [dft]
 dft_code = "qe"
-n_cores = 16
+n_cores = 8
 mpi_env = "numa"
 projector_type = "w90"
 dft_exec = "pw.x"
 w90_tolerance = 1e-6
+
