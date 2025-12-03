@@ -1,0 +1,45 @@
+[general]
+seedname = "smo"
+jobname = "out"
+enforce_off_diag = true
+block_threshold= 0.001
+csc = true
+
+prec_mu = 0.001
+
+h_int_type = "kanamori"
+U = 3.1
+J = 0.3
+beta = 20
+
+n_iter_dmft_first = 30
+n_iter_dmft_per = 2
+n_iter_dmft = 30
+h5_save_freq = 5
+
+dc_type = 1
+dc = true
+dc_dmft = false
+
+calc_energies = true
+
+[solver]
+type = "cthyb"
+n_l = 35
+length_cycle = 500
+n_warmup_cycles = 10000
+n_cycles_tot = 100e+6
+imag_threshold = 1e-5
+measure_G_l = true
+measure_density_matrix = true
+det_precision_warning = 1e-6
+det_precision_error = 1e2
+det_n_operations_before_check = 0
+
+[dft]
+dft_code = "qe"
+n_cores = 256
+mpi_env = "default"
+projector_type = "w90"
+dft_exec = "pw.x"
+w90_tolerance = 1e-6
