@@ -1,0 +1,67 @@
+
+     Program BANDS v.7.5 starts on 29Nov2025 at 20:38:23 
+        Git branch: develop
+        Last git commit: 70e07caa2a5fab3dd9374bc01196f67e923fc5ea
+        Last git commit date: Mon Aug 18 10:06:47 2025 +0000
+        Last git commit subject: Merge branch 'stressed-by-optional-variables' into
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on   128 processors
+
+     MPI processes distributed on     1 nodes
+     K-points division:     npool     =     128
+     973760 MiB available memory on the printing compute node when the environment starts
+
+
+     Reading xml data from directory:
+
+     ./out/smo.save/
+     file Sr.pz-spn-kjpaw_psl.1.0.0.UPF: wavefunction(s)  4P renormalized
+     file Mo.pz-spn-kjpaw_psl.1.0.0.UPF: wavefunction(s)  4S 4D renormalized
+     file O.pz-n-kjpaw_psl.1.0.0.UPF: wavefunction(s)  2S 2P renormalized
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PZ
+                           (   1   1   0   0   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+
+     G-vector sticks info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Sum        5385    2701    749               419469   148351   21815
+
+     Using Slab Decomposition
+
+     Message from routine divide_et_impera:
+     suboptimal parallelization: some nodes have no k-points
+     Reading collected, re-writing distributed wavefunctions
+     high-symmetry point:  0.0000 0.0000 0.0000   x coordinate   0.0000
+     high-symmetry point:  0.0000 0.5000 0.0000   x coordinate   0.5000
+     high-symmetry point:  0.5000 0.5000 0.0000   x coordinate   1.0000
+     high-symmetry point:  0.0000 0.0000 0.0000   x coordinate   1.7071
+     high-symmetry point:  0.0000 0.0000 0.3536   x coordinate   2.0607
+     high-symmetry point:  0.0000 0.5000 0.3536   x coordinate   2.5607
+     high-symmetry point:  0.5000 0.5000 0.3536   x coordinate   3.0607
+     high-symmetry point:  0.0000 0.0000 0.3536   x coordinate   3.7678
+
+     Plottable bands (eV) written to file smo_bands.dat.gnu
+     Bands written to file smo_bands.dat
+
+     BANDS        :      2.75s CPU      5.90s WALL
+
+
+   This run was terminated on:  20:38:29  29Nov2025            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
