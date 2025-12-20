@@ -1,0 +1,24 @@
+#/usr/bin/bash
+
+# run the scf calculation
+mpirun -n 32 pw.x -i smo.scf.in | tee smo.scf.out
+
+# OPTIONAL: run the DFT bandstructure calculation
+mpirun -n 32 pw.x -i smo.bnd.in | tee smo.bnd.out
+mpirun -n 32 bands.x -i smo.bands.in | tee smo.bands.out
+
+# run the nscf calculation
+mpirun -n 64 pw.x -i smo.nscf.in | tee smo.nscf.out
+
+# Wannierize
+
+# pre-process wannier90
+mpirun -n 32 wannier90.x -pp smo
+# run interface wannier90-quantum espresso
+mpirun -n 32 pw2wannier90.x -i smo.pw2wan.in | tee smo.pw2wan.out
+# run wannier90
+mpirun -n 32 wannier90.x smo
+
+# Interface with TRIQS, this will create the smo.h5 archive to start the calculation
+#python3 ./convert_wannier.py
+
